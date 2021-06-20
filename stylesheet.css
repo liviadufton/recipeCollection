@@ -1,0 +1,443 @@
+/* style properties */
+
+body, nav {
+    font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+header {
+    background-image:url(photos/greenleaf.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+header >* {
+    margin: 15px;
+    position: relative;
+    align-self: center;
+}
+
+h4.headerMenu{
+    margin: 8px;
+    color: white;
+    background-color: transparent;
+    
+}
+
+@media (max-width: 800px){
+    .collapseNavHeader >* {
+        display: none;
+    }
+}
+
+#header_title, #header_title:visited, h4.headerMenu, h4.headerMenu:visited {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#header_title:hover, h4.headerMenu:hover {
+    color: #fffa65;
+    background-color: transparent;
+}
+
+h1 {
+    font-family: 'Dancing Script', Georgia, Times, serif;
+    font-size: 280%;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Dancing Script', Georgia, Times, serif;
+    font-size: 30px;
+    text-align: left;
+    margin: 10px;
+    padding:15px;
+    color: #218c74;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    border: 1px solid black; 
+}
+
+nav a:hover {
+    background-color: #186454;
+    color: white;
+}
+
+
+.card_wrapper {
+    text-align: left;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.card:hover {
+    background-color: rgb(227, 230, 235);
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.card, #recipe_search_card{
+    margin: 0px 16px 16px 0px;
+    padding: 16px;
+    border: 2px solid rgb(199, 196, 196);
+    border-top: 3px solid black;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+#name {
+    width: 300px;
+}
+
+.instructions {
+    margin: 0px;
+}
+
+footer {
+    margin: 0px;
+    border: 2px solid black;
+    padding: 30px 50px;
+}
+
+#footerWithMargin {
+    margin-top: 40px;
+
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin: 5px;
+}
+
+footer a:hover {
+    color: #218c74;
+    background-color: transparent;
+}
+a.fb {
+    background: url(photos/fb.png) no-repeat center;
+    background-size: 120%;
+}
+a.tw {
+    background: url(photos/tw.png) no-repeat center;
+    background-size: 120%;
+}
+
+a.ig {
+    background: url(photos/ig.png) no-repeat center;
+    background-size: 120%;
+}
+
+.social a {
+    text-indent: -10000px;
+}
+
+.social {
+    max-width: 80px;
+}
+
+/* recipe submission styling */
+
+h2 {
+   text-align: center;
+   color: rgb(14, 66, 9);
+
+}
+.recipeSubmissionAll {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-image: url(photos/spices_spoons_portrait.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding: 40px 100px 100px;
+}
+
+.recipeSubmission {
+    background: rgba( 249, 252, 249, 0.40 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+.selectorButton {
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
+    border-width: 1px;
+}
+
+.selectorButton:hover {
+    border-width: 3px;
+}
+#button {
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: #ebebeb;
+    margin-bottom: 20px;
+    border-width: 1px;
+}
+
+.container {
+    text-align: center;
+}
+
+#button:hover {
+    background-color: rgb(14, 61, 34);
+    border-width: 3px;
+    color: white;
+}
+
+.measurementUnit {
+    margin: 0 5px;
+}
+
+li::marker {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* flex properties */
+
+header, .collapseNavHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flexbox >* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+nav li {
+    flex-grow: 1;
+}
+
+.ingredientList {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+.ingredientFieldSet{
+    display: flex;
+    justify-content: left;
+}
+
+.recipeStepsBox {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer ul {
+    display:flex;
+}
+
+.social >* {
+    justify-content: flex-end;
+}
+
+
+/* grid properties */
+
+
+#new_recipes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    grid-gap: 5px;
+}
+
+
+#recipe_card_headers {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+#recipe_01 {
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+}
+
+#recipe_02 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+}
+
+#recipe_03 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 7;
+}
+
+#recipe_04 {
+    grid-column: 3 / 4;
+    grid-row: 5 / 7;
+}
+
+#popular_collections, #search_results{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    grid-gap: 5px;
+}
+
+#pressure_cooker_recipes {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#chicken_recipes {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#vegetarian_recipes {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+#salad_recipes {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.recipeForm {
+    display: grid;
+    row-gap: 20px;
+}
+
+
+/* desktop properties */
+
+@media (min-width: 800px){
+
+    #new_recipes, #popular_collections, #search_results{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+    grid-gap: 5px;
+    }
+
+    #recipe_card_headers {
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+    }
+    
+    #recipe_01 {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    #recipe_02 {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+    
+    #recipe_03 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    #recipe_04 {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+    }
+
+    #pressure_cooker_recipes {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    #chicken_recipes {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    #vegetarian_recipes {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    }
+    
+    #salad_recipes {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+    }
+
+    .collapseNavHeader {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    h4.headerMenu {
+        margin: 8px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-family: 'Dancing Script', Georgia, Times, serif;
+        font-size: 59px;
+        line-height: 50px;
+    }
+    header {
+        background-repeat: no-repeat;
+        background-position-y:top;
+        background-position-x: right;
+    
+    }
+
+    .recipeSubmissionAll {
+        /* padding: 40px 350px 100p */
+        padding-left: 25%;
+        padding-right: 25%;
+}

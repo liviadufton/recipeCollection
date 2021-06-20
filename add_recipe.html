@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Recipe</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script defer type="text/javascript" src="indexscript.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class = "collapseNavHeader">
+            <a href="#">
+                <h4 class = "headerMenu">Recipes</h4>
+            </a>
+            <a href="#">
+                <h4 class = "headerMenu">Articles</h4>
+            </a>
+            <a href="#">
+                <h4 class = "headerMenu">Videos</h4>
+            </a>
+        </div>
+
+        <a id = "header_title" href="index.html">
+            <h1>The Tasty Collection</h1>
+        </a>
+        <div class = "search">
+        
+            <input type="text" placeholder = "Search..." name = "search" id = "search">
+            <button id = "search_button">&#x1F50D</button>
+            
+        </div>
+    </header>
+
+    <nav>
+        <ul class = "menu">
+            <li id = "quick_dinners"><a href="search.html?q=quick%20dinners">Quick Dinners</a></li>
+            <li id = "vegan"><a href="search.html?q=vegan">Vegan</a></li>
+            <li id = "soups"><a href="search.html?q=soups">Soups</a></li>
+            <li id = "drinks"><a href="search.html?q=drinks">Drinks</a></li>
+            <li id = "desserts"><a href="search.html?q=desserts">Desserts</a></li>
+            <li id = "submit"><a href="add_recipe.html">Submit Recipe</a></li>
+        </ul>
+    </nav>
+
+    <div class = recipeSubmissionAll>
+        <h2>Submit a New Recipe</h2>
+
+        <div class = "recipeSubmission">
+            <p id = "greeting">Got a recipe that's been passed down in the family? A new recipe you came up with? Submit your recipe now to be featured on the site!</p>
+
+            <p class = "instructions">* = required field</p>
+
+            <form action="#" onSubmit = "onSubmit(event)" class = "recipeForm">
+
+                <input type="text" name = "name" id = "name" placeholder="Recipe Name *" required>
+
+                <div class = "flexbox">
+                    <textarea name = "description" id = "description" placeholder = "Recipe description..." rows="3" cols="50"></textarea>
+                </div> 
+
+                <div class = "flexbox">  
+                    <label for="serves">This recipe</label>
+                    <select name="serves" id="serves">
+                        <option value="serves">serves</option>
+                        <option value="makes">makes</option>
+                    </select>
+                    <input type="text" name = "servesAmount" id = "servesAmount" placeholder="Amount *" required>
+                </div> 
+                <div class = "flexbox">
+                    <label for="prepTime">Prep Time *</label>
+                    <input type="number" name = "prepTimeHours" id = "prepTimeHours" placeholder="Hrs" required>
+                    <input type="number" name = "prepTimeMinutes" id = "prepTimeMinutes" placeholder="Mins" required>
+                </div> 
+
+                <div class = "flexbox">
+                    <label for="cookTime">Cook Time *</label>
+                    <input type="number" name = "cookTimeHours" id = "cookTimeHours" placeholder="Hrs" required>
+                    <input type="number" name = "cookTimeMinutes" id = "cookTimeMinutes" placeholder="Mins" required>
+                </div> 
+
+                <div>
+                    <p class = "instructions">Enter your ingredients one at a time *</p>
+                    <ul id = "ingredientList">
+                        <li class = "ingredientFieldSet">
+                            <div class = "ingredientQuantityField">
+                                <input type="number" name = "quantity" class = "quantity" placeholder = "Qty" required>
+                            </div>
+                            <div class = "ingredientUnitField">
+                                <select name="measurementUnit" class="measurementUnit">
+                                    <option value="none">none</option>
+                                    <option value="cups">cups</option>
+                                    <option value="tablespoons">tablespoons</option>
+                                    <option value="teaspoons">teaspoons</option>
+                                    <option value="grams">grams</option>
+                                    <option value="liters">liters</option>
+                                    <option value="milliliters">milliliters</option>
+                                    <option value="packets">packets</option>
+                                </select>
+                            </div>
+                            <div class = "ingredientNameField">
+                            <input type="text" name = "ingredientName" class = "ingredientName" placeholder = "Ingredient" required>
+                            </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <input type = "button" value = "Add new ingredient" onclick = "addIngredient()" class = "selectorButton">
+                    </div>
+                </div> 
+
+                <div class = "recipeStepsBox">
+                    <p class = "instructions">Add the instructions one at a time *</p>
+                    <ol id = "instructionList">
+                        <li class = "instructionLi">
+                            <textarea name = "recipeStep" class = "recipeStep" required></textarea>
+                        </li>
+                    </ol>
+                    <div>
+                        <input type = "button" value = "Add new instruction" onclick = "addInstruction()" class = "selectorButton">
+                    </div>
+                </div> 
+
+                <div>
+                    <p class = "instructions">Optional: Add a photo of your recipe.</p>
+                    <input type="file" id="img" name="img" accept="image/*" ">
+                </div>
+
+                <div>
+                    <p class = "instructions">Enter your personal information *</p>
+                    <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                    <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div> 
+
+                <div class = "container">
+                    <button type="submit" id="button">Submit Recipe</button> 
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <ul class = "data-links">
+            <li><a href = "#">ABOUT</a></li>
+            <li><a href = "#">CONTACT ME</a></li>
+            <li><a href = "#">DATA PRIVACY POLICY</a></li>
+        </ul>    
+        <ul class = "social">
+            <li><a href = "https://www.facebook.com" class = "fb" target="_blank">Facebook</a></li>
+            <li><a href = "https://www.twitter.com" class = "tw" target="_blank">Twitter</a></li>
+            <li><a href = "https://www.instagram.com" class = "ig" target="_blank">Instagram</a></li>
+        </ul>
+    
+    </footer>
+    
+</body>
+
+</html>

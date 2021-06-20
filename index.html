@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tasty Collection</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script defer type="text/javascript" src="indexscript.js"></script>
+</head>
+<body>
+    <header>
+        <div class = "collapseNavHeader">
+            <a href="#">
+                <h4 class = "headerMenu">Recipes</h4>
+            </a>
+            <a href="#">
+                <h4 class = "headerMenu">Articles</h4>
+            </a>
+            <a href="#">
+                <h4 class = "headerMenu">Videos</h4>
+            </a>
+        </div>
+
+        <a id = "header_title" href="index.html">
+            <h1>The Tasty Collection</h1>
+        </a>
+        <div class = "search">
+        
+            <input type="text" placeholder = "Search..." name = "search" id = "search">
+            <button id = "search_button">&#x1F50D</button>
+            
+        </div>
+    </header>
+
+    <nav>
+        <ul class = "menu">
+            <li id = "quick_dinners"><a href="search.html?q=quick%20dinners">Quick Dinners</a></li>
+            <li id = "vegan"><a href="search.html?q=vegan">Vegan</a></li>
+            <li id = "soups"><a href="search.html?q=soups">Soups</a></li>
+            <li id = "drinks"><a href="search.html?q=drinks">Drinks</a></li>
+            <li id = "desserts"><a href="search.html?q=desserts">Desserts</a></li>
+            <li id = "submit"><a href="add_recipe.html">Submit Recipe</a></li>
+        </ul>
+    </nav>
+
+    <div id = "content">
+        <div id = "new_recipes">
+            <h3 id = "recipe_card_headers">New Recipes</h2>
+            <a href="https://www.simplyrecipes.com/recipes/rosemary_chicken_skewers_with_berry_sauce/" id = "recipe_01" class = "card" target="_blank">
+                <div class = "card_image">
+                    <div id = "recipe_01_photo">
+                        <img src="photos/skewers.jpg" alt="skewers">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <h4>Rosemary Chicken Skewers with Berry Sauce</h4>
+                </div>
+            </a>
+
+            <a href="https://www.tasteofhome.com/recipes/coconut-layered-pound-cake/" id = "recipe_02" class = "card" target="_blank">
+                <div class = "card_image">
+                    <div id = "recipe_02_photo">
+                        <img src="photos/cake.jpg" alt="cake">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <h4>Coconut-Layered Cake</h4>
+                </div>
+            </a>
+
+            <a href="http://steamykitchen.com/15145-miso-ramen-recipe.html" id = "recipe_03" class = "card" target="_blank">
+                <div class = "card_image">
+                    <div id = "recipe_03_photo">
+                        <img src="photos/ramen.jpg" alt="ramen">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <h4>Miso Ramen Recipe</h4>
+                </div>
+            </a>
+
+            <a href="https://www.taste.com.au/recipes/tuscan-vegetable-bean-soup/8aa984c5-5792-4e00-902d-33d7f04f12e1" id = "recipe_04" class = "card" target="_blank">
+                <div class = "card_image">
+                    <div id = "recipe_04_photo">
+                        <img src="photos/tuscan_soup.jpeg" alt="vegetable soup">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <h4>Tuscan Vegetable and Bean Soup</h4>
+                </div>
+            </a>
+        </div>
+        
+        <div id = "popular_collections">
+            <h3 id = "recipe_card_headers">Popular Collections</h2>
+            <a href="search.html?q=instapot" id = "pressure_cooker_recipes" class = "card">
+                <div class = "card_image">
+                    <div id = "pressure_cooker_photo">
+                        <img src="photos/pressure_cooker.jpg" alt="">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <div id = "pressure_cooker_text">
+                        <h4>Pressure Cooker (InstaPot) Recipes</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="search.html?q=chicken" id = "chicken_recipes" class = "card">
+                <div class = "card_image">
+                    <div id = "chicken_recipes_photo">
+                        <img src="photos/chicken_recipes.jpg" alt="">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <div id = "chicken_recipes_text">
+                        <h4>Chicken Recipes</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="search.html?q=vegetarian" id = "vegetarian_recipes" class = "card">
+                <div class = "card_image">
+                    <div id = "vegetarian_recipes_photo">
+                        <img src="photos/vegetarian_pizza.jpg" alt="">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <div id = "vegetarian_recipes_text">
+                        <h4>Vegetarian Recipes</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="search.html?q=salad" id = "salad_recipes" class = "card">
+                <div class = "card_image">
+                    <div id = "salad_recipes_photo">
+                        <img src="photos/salad_recipes.jpg" alt="">
+                    </div>
+                </div>
+                <div class = "card_wrapper">
+                    <div id = "salad_recipes_text">
+                        <h4>Hearty Salad Recipes</h4>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <footer id = "footerWithMargin">
+        <ul class = "data-links">
+            <li><a href = "#">ABOUT</a></li>
+            <li><a href = "#">CONTACT ME</a></li>
+            <li><a href = "#">DATA PRIVACY POLICY</a></li>
+        </ul>    
+        <ul class = "social">
+            <li><a href = "https://www.facebook.com" class = "fb" target="_blank">Facebook</a></li>
+            <li><a href = "https://www.twitter.com" class = "tw" target="_blank">Twitter</a></li>
+            <li><a href = "https://www.instagram.com" class = "ig" target="_blank">Instagram</a></li>
+        </ul>
+    
+    </footer>
+
+   
+</body>
+</html>
